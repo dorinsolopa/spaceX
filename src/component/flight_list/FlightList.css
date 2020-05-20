@@ -1,0 +1,27 @@
+.flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+.card {
+    display:flex;
+    justify-content: space-between;
+    width: 500px;
+    height: 30px;
+    border-radius: 15px;
+    padding: 15px;
+    border-style: initial;
+    box-shadow: grey;
+    margin-top: 10px;
+    box-shadow: 5px 3px 5px 4px grey;
+}
+.select {
+    display: flex;
+    justify-content: flex-end;
+}
+.select  {
+    background-color:#162797 ;
+    color: white;
+    height: 25px;
+}
+
