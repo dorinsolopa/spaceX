@@ -18,10 +18,8 @@
 .select {
     display: flex;
     justify-content: flex-end;
-}
-.select  {
-    background-color:#162797 ;
-    color: white;
+   
+    color: #162797;
     height: 25px;
 }
 

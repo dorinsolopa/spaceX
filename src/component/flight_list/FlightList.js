@@ -73,7 +73,7 @@ return item.launch_year === this.state.year
             </select>
           </div>
           <div>
-            <select onChange={(event) => this.onSort(event.target.value)}>
+            <select  className="select"  onChange={(event) => this.onSort(event.target.value)}>
               <option value={"asc"}>Sort Asc</option>
               <option value={"desc"}>Sort Desc</option>
             </select>
