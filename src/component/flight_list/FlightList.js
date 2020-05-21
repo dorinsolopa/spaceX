@@ -4,6 +4,7 @@ import style from "../flight_list/FlightList";
 class FlightList extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       loading: true,
       flights: [],
@@ -59,23 +60,26 @@ class FlightList extends React.Component {
       );
     });
 
-    const filtered = sorted.filter((item)=>{
-return item.launch_year === this.state.year
-    })
+    const filtered = sorted.filter((item) => {
+      return item.launch_year === this.state.year;
+    });
     return (
-      <div>
+      <div className="padding">
         <div className="select">
           <div>
-            <select className="select" onChange={this.changeData}>
+            <select className="select color" onChange={this.changeData}>
               {this.state.yearOptions.map((item) => {
                 return <option value={item.value}>{item.label}</option>;
               })}
             </select>
           </div>
-          <div>
-            <select  className="select"  onChange={(event) => this.onSort(event.target.value)}>
-              <option value={"asc"}>Sort Asc</option>
-              <option value={"desc"}>Sort Desc</option>
+          <div className="space">
+            <select
+              className="select color "
+              onChange={(event) => this.onSort(event.target.value)}
+            >
+              <option value={"asc"}>Sort Ascending</option>
+              <option value={"desc"}>Sort Descending</option>
             </select>
           </div>
         </div>
@@ -83,13 +87,17 @@ return item.launch_year === this.state.year
           {filtered.map((item) => {
             return (
               <div className="card">
-                <div>#{item.flight_number}</div>
-                <div>{item.mission_name}</div>
+                <div className="size">
+                  <b> #{item.flight_number}</b>
+                </div>
+                <div className="size">{item.mission_name}</div>
                 <div>
-                  <small>
+                  <small >
                     {new Date(item.launch_date_local).toDateString()}
                   </small>
-                  <div>{item.rocket.rocket_name}</div>
+                  <div style={{ textAlign: "center"}}>
+                    <b>{item.rocket.rocket_name}</b>
+                  </div>
                 </div>
               </div>
             );

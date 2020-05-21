@@ -9,16 +9,21 @@ img {
     display: flex;
     justify-content:space-between ;
     padding-top: 15px;
-    padding-right: 25px;
+  
 }
 
 .shadow {
-    text-shadow: 2px 2px 5px #0A25D5;
-    
+    text-shadow: 2px 2px 5px grey;
+    font-size: 25px;
+    color:grey;
 }
 .button {
-    border-radius: 15px;
-    box-shadow: 5px 3px 2px grey;
-    background-color: #1D2E98;
-    height: 30px;
+    
+    color: white;
+    background-color: blue;
+    height: 40px;
+    width: 125px;
+    border-bottom-left-radius: 20px 20px;
+    border-top-left-radius: 20px 20px;
+    text-align: center;
 }

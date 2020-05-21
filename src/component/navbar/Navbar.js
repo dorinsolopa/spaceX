@@ -13,13 +13,15 @@ class Navbar extends React.Component {
             src={require("../../assets/spacex-logo.png")}
             className={style.img}
           />
-          <a className="shadow">
-            <b>LAUNCHES</b>
-          </a>
+          <a className="shadow">LAUNCHES</a>
         </div>
         <div>
           <button className="button" onClick={this.refreshPage}>
             Reload Data
+            <img
+              style={{ width: "13px", height: "auto", alignItems: "right" }}
+              src={require("../../assets/icon/refresh.png")}
+            />
           </button>
         </div>
       </div>

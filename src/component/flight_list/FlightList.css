@@ -18,8 +18,30 @@
 .select {
     display: flex;
     justify-content: flex-end;
-   
-    color: #162797;
-    height: 25px;
+    color: white;
+    height: 35px;
+  
+    
 }
 
+.card:hover {
+    background-color: grey;
+}
+.padding{
+    padding-right: 30px;
+}
+.space{
+    margin-left: 10px;
+    background-color: white;
+}
+ .color {
+     background-color: blue;
+ }
+
+ .size {
+     font-size: 18px;
+  
+ }
+ .text {
+     text-align: left ;
+ }
