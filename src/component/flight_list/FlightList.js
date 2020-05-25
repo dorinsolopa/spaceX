@@ -1,5 +1,8 @@
 import React from "react";
 import style from "../flight_list/FlightList";
+import { Link } from "react-router-dom";
+import Card from "./Card";
+import FlightItem from "./flightItem";
 
 class FlightList extends React.Component {
   constructor(props) {
@@ -10,7 +13,7 @@ class FlightList extends React.Component {
       flights: [],
       year: "",
       yearOptions: [],
-      sortType: "",
+      sortType: "asc",
     };
   }
 
@@ -54,13 +57,15 @@ class FlightList extends React.Component {
 
     const sorted = flights.sort((a, b) => {
       const isReversed = sortType === "asc" ? 1 : -1;
-
       return (
         isReversed * a.launch_date_local.localeCompare(b.launch_date_local)
       );
     });
 
     const filtered = sorted.filter((item) => {
+      if (!this.state.year) {
+        return true;
+      }
       return item.launch_year === this.state.year;
     });
     return (
@@ -68,6 +73,7 @@ class FlightList extends React.Component {
         <div className="select">
           <div>
             <select className="select color" onChange={this.changeData}>
+              <option value=""> All years</option>
               {this.state.yearOptions.map((item) => {
                 return <option value={item.value}>{item.label}</option>;
               })}
@@ -86,20 +92,9 @@ class FlightList extends React.Component {
         <div>
           {filtered.map((item) => {
             return (
-              <div className="card">
-                <div className="size">
-                  <b> #{item.flight_number}</b>
-                </div>
-                <div className="size">{item.mission_name}</div>
-                <div>
-                  <small >
-                    {new Date(item.launch_date_local).toDateString()}
-                  </small>
-                  <div style={{ textAlign: "center"}}>
-                    <b>{item.rocket.rocket_name}</b>
-                  </div>
-                </div>
-              </div>
+              <Link to={`/InfoPage/${item.flight_number}`}>
+                <FlightItem item={item} />
+              </Link>
             );
           })}
         </div>
