@@ -39,9 +39,24 @@
  }
 
  .size {
-     font-size: 18px;
+     font-size: 14px;
   
  }
  .text {
      text-align: left ;
  }
+ @media screen and (max-width: 700px) {
+    .card {
+        display:flex;
+        justify-content: space-between;
+        width: 250px;
+        height: 25px;
+        border-radius: 15px;
+        padding: 10px;
+        border-style: initial;
+        box-shadow: grey;
+        margin-top: 10px;
+        box-shadow: 5px 3px 3px 4px grey;
+    }
+
+  }

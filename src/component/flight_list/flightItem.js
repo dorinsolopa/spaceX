@@ -4,7 +4,8 @@ import Card from "./Card";
 const FlightItem = (props) => {
   const item = props.item;
   return (
-    <Card >
+    <Card>
+   
       <div className="size">
         <b> #{item.flight_number}</b>
         <div className="size">{item.mission_name}</div>
@@ -15,6 +16,7 @@ const FlightItem = (props) => {
           <b>{item.rocket.rocket_name}</b>
         </div>
       </div>
+     
     </Card>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./Navbar.css";
+import { Redirect } from "react-router-dom";
 class Navbar extends React.Component {
   refreshPage = () => {
     window.location.reload(false);
@@ -12,6 +13,7 @@ class Navbar extends React.Component {
           <img
             src={require("../../assets/spacex-logo.png")}
             className={style.img}
+            href="/dashboard"
           />
           <a className="shadow">LAUNCHES</a>
         </div>

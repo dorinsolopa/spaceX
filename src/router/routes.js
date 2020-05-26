@@ -5,7 +5,7 @@ import InfoPage from "../component/infoPage/InfoPage"
 
 export const routes = [
     {
-        path:"/Dashboard",
+        path:"/",
         exact:true,
         component:Dashboard,
         name:"Dashboard",
@@ -14,7 +14,6 @@ export const routes = [
     },
     {
         path:"/InfoPage/:flightId",
-       
         component:InfoPage,
         name:"InfoPage",
         menu:true,

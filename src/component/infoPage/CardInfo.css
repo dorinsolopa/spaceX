@@ -1,11 +1,64 @@
 .grid-container {
     display: grid;
-    justify-content: space-around;
-    grid-template-columns: 50px 50px 50px; /*Make the grid smaller than the container*/
+    justify-content: space-evenly;
+    grid-template-columns: auto auto auto; /*Make the grid smaller than the container*/
     grid-gap: 10px;
     padding: 10px;
+  
   }
   .width{
     width: 300px;
     height: 250px;
+    border: 3px solid grey;
+    border-radius: 15px;
+    align-items: center;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 25px;
+
+  }
+
+  .card-info{
+    border: 5px solid grey;
+    border-radius: 15px;
+  }
+
+  @media screen and (max-width: 992px) {
+    .center {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 15px;
+  
+    }
+    .width{
+      width: 150px;
+      height: 125px;
+      border: 2px solid grey;
+      border-radius: 15px;
+      align-items: center;
+    }
+    .grid-container {
+      display: grid;
+      justify-content:space-evenly;
+      justify-self: center;
+      grid-template-columns:auto auto ; /*Make the grid smaller than the container*/
+      grid-gap: 5px;
+      padding: 5px;
+    
+    }
+  }
+
+  @media screen and (max-width: 600px ) {
+    .grid-container {
+      display: grid;
+      justify-content:space-evenly;
+      justify-self: center;
+      grid-template-columns:auto  ; /*Make the grid smaller than the container*/
+      grid-gap: 5px;
+      padding: 5px;
+    
+    }
   }
